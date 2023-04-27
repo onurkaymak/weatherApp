@@ -1,0 +1,17 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, 0.3),
+    rgba(16, 18, 0, 0.8)
+  );
+  filter: saturate(0.4);
+  background-size: cover;
+  background-position: top;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
