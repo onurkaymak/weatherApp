@@ -1,6 +1,6 @@
 import classes from './DailyForecast.module.scss';
 
-import video from "../img/videos/windy.mp4";
+import video from "../img/videos/clear.mp4";
 
 import sunnyImg from '../img/forecastImg/sun.png';
 import locationImg from '../img/forecastImg/location.png';
@@ -13,7 +13,7 @@ const DailyForecast = () => {
     return (
         <section className={classes.dailyForecast__container}>
             <div className={classes.dailyForecast__bg_container}>
-                <video className={classes.dailyForecast__bg} autoPlay loop muted>
+                <video className={classes.dailyForecast__bg_video} autoPlay loop muted>
                     <source src={video} type="video/mp4" />
                 </video>
             </div>
