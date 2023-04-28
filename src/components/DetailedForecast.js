@@ -6,6 +6,8 @@ import RainIcon from '../img/icons/RainIcon';
 import WindIcon from '../img/icons/WindIcon';
 // import SnowIcon from '../img/icons/SnowIcon';
 
+import locationImg from '../img/forecastImg/location.png';
+
 const DetailedForecast = () => {
     return (
         <section className={classes.detailedForecast__container}>
@@ -48,7 +50,9 @@ const DetailedForecast = () => {
                 </ul>
             </div>
             <div className={classes.detailedForecast__location_container}>
-                <button className={classes.detailedForecast__location_button}>Change Location</button>
+                <button className={classes.detailedForecast__location_button}>
+                    <img className={classes.detailedForecast__location_button_icon} src={locationImg} alt='weather'></img>
+                    Change Location</button>
             </div>
         </section>
     )
