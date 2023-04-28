@@ -1,5 +1,11 @@
 import classes from './DetailedForecast.module.scss';
 
+import SunIcon from '../img/icons/SunIcon';
+import CloudIcon from '../img/icons/CloudIcon';
+import RainIcon from '../img/icons/RainIcon';
+import SnowIcon from '../img/icons/SnowIcon';
+import WindIcon from '../img/icons/WindIcon';
+
 const DetailedForecast = () => {
     return (
         <section className={classes.detailedForecast__container}>
@@ -17,7 +23,31 @@ const DetailedForecast = () => {
                     <span className={classes.detailedForecast__info_wind_value}>8 mph</span>
                 </div>
             </div>
-            <div className={classes.detailedForecast__weekly_container}></div>
+            <div className={classes.detailedForecast__weekly_container}>
+                <ul className={classes.detailedForecast__weekly_list}>
+                    <li className={classes.detailedForecast__weekly_list_item}>
+                        <SunIcon />
+                        <span className={classes.detailedForecast__weekly_list_item_day}>Tue</span>
+                        <span className={classes.detailedForecast__weekly_list_item_temp}>79F</span>
+                    </li>
+                    <li className={classes.detailedForecast__weekly_list_item}>
+                        <CloudIcon />
+                        <span className={classes.detailedForecast__weekly_list_item_day}>Wed</span>
+                        <span className={classes.detailedForecast__weekly_list_item_temp}>63F</span>
+                    </li>
+                    <li className={classes.detailedForecast__weekly_list_item}>
+                        <RainIcon />
+                        <span className={classes.detailedForecast__weekly_list_item_day}>Thur</span>
+                        <span className={classes.detailedForecast__weekly_list_item_temp}>65F</span>
+                    </li>
+                    <li className={classes.detailedForecast__weekly_list_item}>
+                        <WindIcon />
+                        <span className={classes.detailedForecast__weekly_list_item_day}>Fri</span>
+                        <span className={classes.detailedForecast__weekly_list_item_temp}>71F</span>
+                    </li>
+
+                </ul>
+            </div>
             <div className={classes.detailedForecast__location_container}></div>
         </section>
     )
