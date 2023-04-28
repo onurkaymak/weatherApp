@@ -3,8 +3,8 @@ import classes from './DetailedForecast.module.scss';
 import SunIcon from '../img/icons/SunIcon';
 import CloudIcon from '../img/icons/CloudIcon';
 import RainIcon from '../img/icons/RainIcon';
-import SnowIcon from '../img/icons/SnowIcon';
 import WindIcon from '../img/icons/WindIcon';
+// import SnowIcon from '../img/icons/SnowIcon';
 
 const DetailedForecast = () => {
     return (
@@ -45,10 +45,11 @@ const DetailedForecast = () => {
                         <span className={classes.detailedForecast__weekly_list_item_day}>Fri</span>
                         <span className={classes.detailedForecast__weekly_list_item_temp}>71F</span>
                     </li>
-
                 </ul>
             </div>
-            <div className={classes.detailedForecast__location_container}></div>
+            <div className={classes.detailedForecast__location_container}>
+                <button className={classes.detailedForecast__location_button}>Change Location</button>
+            </div>
         </section>
     )
 };

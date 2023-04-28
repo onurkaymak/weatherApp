@@ -100,17 +100,48 @@
           box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
         }
         &_day {
+          font-weight: 200;
         }
         &_temp {
           font-weight: 500;
+        }
+
+        &_active {
+          // background: #fff;
+          // color: #222831;
+          // border-radius: 10px;
         }
       }
     }
   }
 
-  &__location_container {
-    background-color: orangered;
-    grid-column: 2 / 3;
-    grid-row: 6 / 7;
+  &__location {
+    &_container {
+      grid-column: 2 / 3;
+      grid-row: 6 / 7;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &_button {
+      outline: none;
+      width: 100%;
+      border: none;
+      border-radius: 2.5rem;
+      padding: 1rem;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+      background-image: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+      cursor: pointer;
+      transition: transform 200ms ease;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
   }
 }
