@@ -1,4 +1,8 @@
+import { useContext, useState } from 'react';
+
 import classes from './DetailedForecast.module.scss';
+
+import WeatherContext from '../store/weather-context';
 
 import SunIcon from '../img/icons/SunIcon';
 import CloudIcon from '../img/icons/CloudIcon';
@@ -8,7 +12,19 @@ import WindIcon from '../img/icons/WindIcon';
 
 import locationImg from '../img/forecastImg/location.png';
 
+
 const DetailedForecast = () => {
+
+    const ctx = useContext(WeatherContext);
+
+    const [isForm, setIsForm] = useState(false);
+
+    const buttonHandler = () => {
+        setIsForm(prevState => !prevState);
+    }
+
+
+
     return (
         <section className={classes.detailedForecast__container}>
             <div className={classes.detailedForecast__info_container}>
@@ -27,7 +43,7 @@ const DetailedForecast = () => {
             </div>
             <div className={classes.detailedForecast__weekly_container}>
                 <ul className={classes.detailedForecast__weekly_list}>
-                    <li className={classes.detailedForecast__weekly_list_item}>
+                    <li className={classes.detailedForecast__weekly_list_item_active}>
                         <SunIcon />
                         <span className={classes.detailedForecast__weekly_list_item_day}>Tue</span>
                         <span className={classes.detailedForecast__weekly_list_item_temp}>79F</span>
@@ -50,9 +66,26 @@ const DetailedForecast = () => {
                 </ul>
             </div>
             <div className={classes.detailedForecast__location_container}>
-                <button className={classes.detailedForecast__location_button}>
-                    <img className={classes.detailedForecast__location_button_icon} src={locationImg} alt='weather'></img>
-                    Change Location</button>
+                {!isForm && (
+                    <button className={classes.detailedForecast__location_button} onClick={buttonHandler}>
+                        <img className={classes.detailedForecast__location_button_icon} src={locationImg} alt='weather'></img>
+                        Change Location
+                    </button>
+                )}
+                {isForm && (
+                    <div className={classes.detailedForecast__location__formContainer}>
+                        <form className={classes.detailedForecast__location__form} >
+                            <input
+                                autoFocus
+                                onBlur={buttonHandler}
+                                type="text"
+                                className={classes.detailedForecast__location__form_input}
+                                placeholder='Search for weather'>
+                            </input>
+                            <button className={classes.detailedForecast__location__form_button} type="submit">Okay</button>
+                        </form>
+                    </div>
+                )}
             </div>
         </section>
     )

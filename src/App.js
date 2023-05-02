@@ -5,6 +5,9 @@ import DailyForecast from './components/DailyForecast';
 import DetailedForecast from './components/DetailedForecast';
 
 function App() {
+
+
+
   return (
     <div className={classes.container}>
       <Card>
