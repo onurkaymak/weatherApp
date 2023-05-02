@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useRef } from 'react';
 
 import classes from './DetailedForecast.module.scss';
 
@@ -19,11 +19,23 @@ const DetailedForecast = () => {
 
     const [isForm, setIsForm] = useState(false);
 
+    const inputRef = useRef();
+
     const buttonHandler = () => {
         setIsForm(prevState => !prevState);
     }
 
+    const formSubmitHandler = (event) => {
+        event.preventDefault();
 
+        if (inputRef.current.value === '') {
+            ctx.setError(true)
+            ctx.setErrorInfo({ errorInfo: 'You must search for a city and state - E.g. (Portland, OR)' })
+            return
+        }
+
+        ctx.onLocationChange();
+    }
 
     return (
         <section className={classes.detailedForecast__container}>
@@ -74,10 +86,11 @@ const DetailedForecast = () => {
                 )}
                 {isForm && (
                     <div className={classes.detailedForecast__location__formContainer}>
-                        <form className={classes.detailedForecast__location__form} >
+                        <form className={classes.detailedForecast__location__form} onSubmit={formSubmitHandler}>
                             <input
                                 autoFocus
-                                onBlur={buttonHandler}
+                                onBlur={() => { setTimeout(buttonHandler, 200) }}
+                                ref={inputRef}
                                 type="text"
                                 className={classes.detailedForecast__location__form_input}
                                 placeholder='Search for weather'>
