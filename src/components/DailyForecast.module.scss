@@ -23,7 +23,7 @@
     width: 100%;
     border-radius: 20px;
     object-fit: cover;
-    filter: opacity(0.3);
+    filter: opacity(0.5);
   }
 }
 
@@ -81,24 +81,25 @@
   color: white;
 
   &_icon {
-    height: 6rem;
-    width: 6rem;
-    filter: saturate(2);
+    height: 7.5rem;
+    width: 7.5rem;
+    background-color: rgba(5, 244, 252, 0.2);
+    border-radius: 30px;
 
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    align-self: center;
+    align-self: flex-end;
   }
   &_temp {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     align-self: center;
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   &_desc {
     grid-column: 2 / 3;
     grid-row: 5 / 6;
     align-self: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 }
