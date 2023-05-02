@@ -3,13 +3,9 @@
   height: 100vh;
   background-image: linear-gradient(
     to top right,
-    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.9),
     rgba(16, 18, 0, 0.7)
   );
-  filter: saturate(0.4);
-  background-size: cover;
-  background-position: top;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +30,7 @@
   }
   &_card {
     height: 30%;
-    width: 35%;
+    width: 45%;
     z-index: 50;
     color: white;
     font-size: 1.5rem;

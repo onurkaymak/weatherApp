@@ -16,13 +16,9 @@ import locationImg from '../img/forecastImg/location.png';
 
 
 const DailyForecast = () => {
-
-
-
     const ctx = useContext(WeatherContext);
 
     const [bgVideo, setBgVideo] = useState();
-
 
     useEffect(() => {
         const id = ctx.location.weatherId;
@@ -49,7 +45,7 @@ const DailyForecast = () => {
                 setBgVideo(cloudy)
                 break;
             default:
-                console.log('Cannot provide data at this time.')
+                setBgVideo()
         }
     }, [ctx.location])
 

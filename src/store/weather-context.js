@@ -4,7 +4,7 @@ const WeatherContext = React.createContext({
     location: {},
     onLocationChange: () => { },
     error: false,
-    errorInfo: null
+    errorInfo: {}
 
 });
 
@@ -54,7 +54,8 @@ export const WeatherContextProvider = (props) => {
             })
         }
         catch (err) {
-            console.log(err)
+            setError(true)
+            setErrorInfo({ errorInfo: 'Something went wrong, please try again.' })
         }
 
 

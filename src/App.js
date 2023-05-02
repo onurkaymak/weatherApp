@@ -15,6 +15,7 @@ function App() {
 
   const buttonHandler = () => {
     ctx.setError(false)
+    ctx.setErrorInfo({})
   }
 
   return (
