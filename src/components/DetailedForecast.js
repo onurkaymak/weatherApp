@@ -61,21 +61,21 @@ const DetailedForecast = () => {
                             src={'https://openweathermap.org/img/wn/10d@2x.png'} alt='weather'>
                         </img>
                         <span className={classes.detailedForecast__weekly_list_item_day}>Day</span>
-                        <span className={classes.detailedForecast__weekly_list_item_temp}>55</span>
+                        <span className={classes.detailedForecast__weekly_list_item_temp}>50</span>
                     </li>
                     <li className={classes.detailedForecast__weekly_list_item}>
                         <img className={classes.detailedForecast__weekly_list_item_icon}
                             src={'https://openweathermap.org/img/wn/03d@2x.png'} alt='weather'>
                         </img>
                         <span className={classes.detailedForecast__weekly_list_item_day}>Day</span>
-                        <span className={classes.detailedForecast__weekly_list_item_temp}>64</span>
+                        <span className={classes.detailedForecast__weekly_list_item_temp}>50</span>
                     </li>
                     <li className={classes.detailedForecast__weekly_list_item}>
                         <img className={classes.detailedForecast__weekly_list_item_icon}
                             src={'https://openweathermap.org/img/wn/09d@2x.png'} alt='weather'>
                         </img>
                         <span className={classes.detailedForecast__weekly_list_item_day}>Day</span>
-                        <span className={classes.detailedForecast__weekly_list_item_temp}>61</span>
+                        <span className={classes.detailedForecast__weekly_list_item_temp}>50</span>
                     </li>
                 </ul>
             </div>
