@@ -1,3 +1,37 @@
+@mixin detailedInfo {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+
+  @media only screen and (max-width: 1150px) {
+    font-size: 1.8rem;
+  }
+
+  @media only screen and (max-width: 850px) {
+    font-size: 1.6rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    font-size: 1.4rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 1.2rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    font-size: 1rem;
+  }
+
+  @media only screen and (max-width: 370px) {
+    font-size: 0.8rem;
+  }
+
+  @media only screen and (max-width: 310px) {
+    font-size: 0.6rem;
+  }
+}
+
 .detailedForecast {
   &__container {
     width: 50%;
@@ -10,6 +44,9 @@
     grid-template-rows: 7.5% 25% 5% 30% 5% 15% 7.5%;
   }
   &__info {
+    display: flex;
+    justify-content: space-between;
+
     &_container {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
@@ -17,219 +54,12 @@
       flex-direction: column;
       justify-content: space-evenly;
     }
-
-    &_feelslike {
-      display: flex;
-      justify-content: space-between;
-
-      &_title {
-        color: white;
-        font-size: 2rem;
-        font-weight: 600;
-
-        @media only screen and (max-width: 1150px) {
-          font-size: 1.8rem;
-        }
-
-        @media only screen and (max-width: 850px) {
-          font-size: 1.6rem;
-        }
-
-        @media only screen and (max-width: 700px) {
-          font-size: 1.4rem;
-        }
-
-        @media only screen and (max-width: 600px) {
-          font-size: 1.2rem;
-        }
-
-        @media only screen and (max-width: 500px) {
-          font-size: 1rem;
-        }
-
-        @media only screen and (max-width: 370px) {
-          font-size: 0.8rem;
-        }
-
-        @media only screen and (max-width: 310px) {
-          font-size: 0.6rem;
-        }
-      }
-      &_value {
-        color: white;
-        font-size: 2rem;
-        font-weight: 300;
-
-        @media only screen and (max-width: 1150px) {
-          font-size: 1.8rem;
-        }
-
-        @media only screen and (max-width: 850px) {
-          font-size: 1.6rem;
-        }
-
-        @media only screen and (max-width: 700px) {
-          font-size: 1.4rem;
-        }
-
-        @media only screen and (max-width: 600px) {
-          font-size: 1.2rem;
-        }
-
-        @media only screen and (max-width: 500px) {
-          font-size: 1rem;
-        }
-
-        @media only screen and (max-width: 370px) {
-          font-size: 0.8rem;
-        }
-
-        @media only screen and (max-width: 310px) {
-          font-size: 0.6rem;
-        }
-      }
+    &_title {
+      @include detailedInfo;
     }
-
-    &_humidity {
-      display: flex;
-      justify-content: space-between;
-      &_title {
-        color: white;
-        font-size: 2rem;
-        font-weight: 600;
-
-        @media only screen and (max-width: 1150px) {
-          font-size: 1.8rem;
-        }
-
-        @media only screen and (max-width: 850px) {
-          font-size: 1.6rem;
-        }
-
-        @media only screen and (max-width: 700px) {
-          font-size: 1.4rem;
-        }
-
-        @media only screen and (max-width: 600px) {
-          font-size: 1.2rem;
-        }
-
-        @media only screen and (max-width: 500px) {
-          font-size: 1rem;
-        }
-
-        @media only screen and (max-width: 370px) {
-          font-size: 0.8rem;
-        }
-
-        @media only screen and (max-width: 310px) {
-          font-size: 0.6rem;
-        }
-      }
-      &_value {
-        color: white;
-        font-size: 2rem;
-        font-weight: 300;
-
-        @media only screen and (max-width: 1150px) {
-          font-size: 1.8rem;
-        }
-
-        @media only screen and (max-width: 850px) {
-          font-size: 1.6rem;
-        }
-
-        @media only screen and (max-width: 700px) {
-          font-size: 1.4rem;
-        }
-
-        @media only screen and (max-width: 600px) {
-          font-size: 1.2rem;
-        }
-
-        @media only screen and (max-width: 500px) {
-          font-size: 1rem;
-        }
-
-        @media only screen and (max-width: 370px) {
-          font-size: 0.8rem;
-        }
-
-        @media only screen and (max-width: 310px) {
-          font-size: 0.6rem;
-        }
-      }
-    }
-
-    &_wind {
-      display: flex;
-      justify-content: space-between;
-      &_title {
-        color: white;
-        font-size: 2rem;
-        font-weight: 600;
-
-        @media only screen and (max-width: 1150px) {
-          font-size: 1.8rem;
-        }
-
-        @media only screen and (max-width: 850px) {
-          font-size: 1.6rem;
-        }
-
-        @media only screen and (max-width: 700px) {
-          font-size: 1.4rem;
-        }
-
-        @media only screen and (max-width: 600px) {
-          font-size: 1.2rem;
-        }
-
-        @media only screen and (max-width: 500px) {
-          font-size: 1rem;
-        }
-
-        @media only screen and (max-width: 370px) {
-          font-size: 0.8rem;
-        }
-
-        @media only screen and (max-width: 310px) {
-          font-size: 0.6rem;
-        }
-      }
-      &_value {
-        color: white;
-        font-size: 2rem;
-        font-weight: 300;
-
-        @media only screen and (max-width: 1150px) {
-          font-size: 1.8rem;
-        }
-
-        @media only screen and (max-width: 850px) {
-          font-size: 1.6rem;
-        }
-
-        @media only screen and (max-width: 700px) {
-          font-size: 1.4rem;
-        }
-
-        @media only screen and (max-width: 600px) {
-          font-size: 1.2rem;
-        }
-
-        @media only screen and (max-width: 500px) {
-          font-size: 1rem;
-        }
-
-        @media only screen and (max-width: 370px) {
-          font-size: 0.8rem;
-        }
-
-        @media only screen and (max-width: 310px) {
-          font-size: 0.6rem;
-        }
-      }
+    &_value {
+      @include detailedInfo;
+      font-weight: 300;
     }
   }
   &__weekly {

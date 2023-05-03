@@ -34,17 +34,17 @@ const DetailedForecast = () => {
     return (
         <section className={classes.detailedForecast__container}>
             <div className={classes.detailedForecast__info_container}>
-                <div className={classes.detailedForecast__info_feelslike}>
-                    <span className={classes.detailedForecast__info_feelslike_title}>FEELS LIKE</span>
-                    <span className={classes.detailedForecast__info_feelslike_value}>{ctx.location.feelslike} F</span>
+                <div className={classes.detailedForecast__info}>
+                    <span className={classes.detailedForecast__info_title}>FEELS LIKE</span>
+                    <span className={classes.detailedForecast__info_value}>{ctx.location.feelslike} F</span>
                 </div>
-                <div className={classes.detailedForecast__info_humidity}>
-                    <span className={classes.detailedForecast__info_humidity_title}>HUMIDITY</span>
-                    <span className={classes.detailedForecast__info_humidity_value}>{ctx.location.humidity} %</span>
+                <div className={classes.detailedForecast__info}>
+                    <span className={classes.detailedForecast__info_title}>HUMIDITY</span>
+                    <span className={classes.detailedForecast__info_value}>{ctx.location.humidity} %</span>
                 </div>
-                <div className={classes.detailedForecast__info_wind}>
-                    <span className={classes.detailedForecast__info_wind_title}>WIND</span>
-                    <span className={classes.detailedForecast__info_wind_value}>{ctx.location.wind} mph</span>
+                <div className={classes.detailedForecast__info}>
+                    <span className={classes.detailedForecast__info_title}>WIND</span>
+                    <span className={classes.detailedForecast__info_value}>{ctx.location.wind} mph</span>
                 </div>
             </div>
             <div className={classes.detailedForecast__weekly_container}>
