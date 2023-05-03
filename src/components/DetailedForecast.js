@@ -4,7 +4,7 @@ import classes from './DetailedForecast.module.scss';
 
 import WeatherContext from '../store/weather-context';
 
-import locationImg from '../img/forecastImg/location.png';
+import locationImg from '../img/location.png';
 
 
 const DetailedForecast = () => {

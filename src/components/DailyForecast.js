@@ -12,7 +12,7 @@ import rain from "../img/videos/rain.mp4";
 import thunderstorm from "../img/videos/thunderstorm.mp4";
 import severe from "../img/videos/severe.mp4";
 
-import locationImg from '../img/forecastImg/location.png';
+import locationImg from '../img/location.png';
 
 
 const DailyForecast = () => {

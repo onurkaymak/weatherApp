@@ -1,7 +1,47 @@
 .card__container {
-  height: 500px;
-  width: 900px;
+  height: 50rem;
+  width: 90rem;
   background-color: #222831;
   border-radius: 25px;
   display: flex;
+
+  @media only screen and (max-width: 1150px) {
+    height: 45rem;
+    width: 80rem;
+  }
+
+  @media only screen and (max-width: 850px) {
+    height: 40rem;
+    width: 65rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    height: 35rem;
+    width: 55rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: 30rem;
+    width: 45rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    height: 25rem;
+    width: 35rem;
+  }
+
+  @media only screen and (max-width: 370px) {
+    height: 20rem;
+    width: 30rem;
+  }
+
+  @media only screen and (max-width: 310px) {
+    height: 15rem;
+    width: 25rem;
+  }
+
+  @media only screen and (max-width: 950px) and (orientation: landscape) {
+    height: 25rem;
+    width: 45rem;
+  }
 }
