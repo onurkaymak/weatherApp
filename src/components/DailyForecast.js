@@ -53,7 +53,7 @@ const DailyForecast = () => {
     return (
         <section className={classes.dailyForecast__container}>
             <div className={classes.dailyForecast__bg_container}>
-                <video className={classes.dailyForecast__bg_video} src={bgVideo} type="video/mp4" autoPlay loop muted></video>
+                <video className={classes.dailyForecast__bg_video} src={bgVideo} type="video/mp4" autoPlay loop muted playsInline></video>
             </div>
             <div className={classes.dailyForecast__info_top}>
                 <p className={classes.dailyForecast__info_top_dayname}>{ctx.location.dayName}</p>
