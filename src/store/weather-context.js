@@ -30,7 +30,7 @@ export const WeatherContextProvider = (props) => {
 
     const locationHandler = async (props) => {
         try {
-            const cordinateResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${props},US&limit=4&appid=5b5d58b38c748938b6625c4571ed3c31`)
+            const cordinateResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${props},US&limit=4&appid=5b5d58b38c748938b6625c4571ed3c31`)
             const cordinateData = await cordinateResponse.json();
             const lat = cordinateData[0].lat;
             const lon = cordinateData[0].lon;
